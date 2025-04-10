@@ -1,0 +1,40 @@
+
+.custom-date-input{
+  border: 1px solid var(--border-primary);
+  gap: .5rem;
+  border-radius: .5rem;
+  padding: .75rem;
+  
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  & input[type="date"]{
+    padding-right: .75rem;
+    color: var(--content-secondary);
+    background-color: transparent;
+  
+  
+    font-family: var(--ff-inter);
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 150%;
+
+    &::-webkit-calendar-picker-indicator{
+      opacity: 0;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      z-index: 3;
+      right: .25rem;
+      position: absolute;
+    }
+  }
+  & .dropdown-icon{
+    position: absolute;
+    right: .6rem;
+  }
+  
+}
+

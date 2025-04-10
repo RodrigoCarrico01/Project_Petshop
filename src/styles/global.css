@@ -53,3 +53,13 @@ html{
 body{
   background-color: #14151D;
 }
+ul[role="list"]{
+  list-style-type:none;
+}
+img{
+  max-width: 100%;
+}
+input,button{
+  border: 0;
+  outline: 0;
+}

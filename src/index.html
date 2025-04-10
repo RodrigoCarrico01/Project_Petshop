@@ -19,8 +19,8 @@
       <div class="agenda-day-filter">
         <div class="custom-date-input">
           <img src="./assets/icon/calendar.svg" alt="Calendar Icon" class="calendar-icon">
-          <input type="date" id="real-date-input">
-          <img src="./assets/icon/dropdown.svg" alt="Dropdown Icon" class="dropdown-icon" id="trigger-calendar">
+          <input type="date" id="date-filter">
+          <img src="./assets/icon/dropdown.svg" alt="Dropdown Icon" class="dropdown-icon">
         </div>
       </div>
     </header>
@@ -37,7 +37,7 @@
             <span class="animal-name">Thor</span>
             <span class="client-name">Fernanda Costa</span>
             <span class="service-description">Vacinação</span>
-            <button type="reset">
+            <button type="reset" class="remove-button">
               Remover agendamento
             </button>
           </li>
@@ -55,7 +55,7 @@
             <span class="animal-name">Mel</span>
             <span class="client-name">João Souza</span>
             <span class="service-description">Corte de Unhas</span>
-            <button type="reset">
+            <button type="reset" class="remove-button">
               Remover agendamento
             </button>
           </li>
@@ -64,7 +64,7 @@
             <span class="animal-name">Bella</span>
             <span class="client-name">Pedro Martins</span>
             <span class="service-description">Aplicação de Anti-Pulgas</span>
-            <button type="reset">
+            <button type="reset" class="remove-button">
               Remover agendamento
             </button>
           </li>
@@ -73,7 +73,7 @@
             <span class="animal-name">Simba</span>
             <span class="client-name">Juliana Rocha</span>
             <span class="service-description">Tosa Higiênica</span>
-            <button type="reset">
+            <button type="reset" class="remove-button">
               Remover agendamento
             </button>
           </li>
@@ -91,7 +91,7 @@
             <span class="animal-name">Max</span>
             <span class="client-name">Camila Santos</span>
             <span class="service-description">Limpeza de Dentes</span>
-            <button type="reset">
+            <button type="reset" class="remove-button">
               Remover agendamento
             </button>
           </li>
@@ -99,5 +99,8 @@
       </section>
     </div>
   </section>
+  <button type="button" id="redirect-form">
+      Novo agendamento
+  </button>
 </body>
 </html>

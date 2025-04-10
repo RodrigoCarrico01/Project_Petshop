@@ -10,5 +10,72 @@
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
+  <section id="agenda" class="container">
+    <header class="agenda-header">
+      <div class="agenda-info">
+        <h1>Sua agenda</h1>
+        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </div>
+      <div class="agenda-day-filter">
+        <input type="date">
+      </div>
+    </header>
+    <div class="agenda-list">
+      <section class="list-section morning">
+        <header class="list-header">
+          <img src="" alt="Blue sun icon.">
+          <h2>Manhã</h2>
+          <span>09h-12h</span>
+        </header>
+        <ul role="list">
+          <li>
+            <span class="hour">09:00</span>
+            <span class="animal-name">Thor</span>
+            <span class="client-name">Fernanda Costa</span>
+            <span class="service-description">Vacinação</span>
+            <button type="reset">
+              Remover Agendamento
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="list-section afternoon">
+        <header class="list-header">
+          <img src="" alt="Orange cloud icon.">
+          <h2>Tarde</h2>
+          <span>13h-18h</span>
+        </header>
+        <ul role="list">
+          <li>
+            <span class="hour">13:00</span>
+            <span class="animal-name">Mel</span>
+            <span class="client-name">João Souza</span>
+            <span class="service-description">Corte de Unhas</span>
+            <button type="reset">
+              Remover Agendamento
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="list-section night">
+        <header class="list-header">
+          <img src="" alt="Yellow moon icon.">
+          <h2>Noite</h2>
+          <span>19h-21h</span>
+        </header>
+        <ul role="list">
+          <li>
+            <span class="hour">20:00</span>
+            <span class="animal-name">Max</span>
+            <span class="client-name">Camila Santos</span>
+            <span class="service-description">Limpeza de Dentes</span>
+            <button type="reset">
+              Remover Agendamento
+            </button>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
 </body>
 </html>

@@ -52,6 +52,7 @@ html{
 }
 body{
   background-color: #14151D;
+  position: relative;
 }
 ul[role="list"]{
   list-style-type:none;
@@ -59,7 +60,8 @@ ul[role="list"]{
 img{
   max-width: 100%;
 }
-input,button{
+input,button, textarea{
   border: 0;
   outline: 0;
+  resize: none;
 }

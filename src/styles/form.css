@@ -1,0 +1,243 @@
+.schedule-form{
+  --max-width: 85em;
+  max-width: var(--max-width);
+  width: calc(100% - 28rem * 2);
+  margin-inline: auto;
+
+  background-color: #23242C;
+  margin-block: 1.25rem;
+  gap: 1.75rem;
+  padding: 2.5rem;
+  border-radius: .75rem;
+  & h2{
+    color: var(--content-primary);
+    font-family: var(--ff-inter-tight);
+    line-height: 2rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-lg);
+    margin-bottom: .25rem;
+  }
+  & p{
+    color: var(--content-secondary);
+  }
+  & form{
+    margin-block: 1.75rem;
+    & .input-wrapper, & .textarea-wrapper, & .date-wrapper, & .hour-wrapper{
+      color: var(--content-primary);
+      font-size: var(--fs-base);
+      line-height: auto;
+      gap: .25rem;
+      margin-block: 1rem;
+
+      & label{
+        font-weight: var(--fw-bold);
+      }
+      & .input-custom{
+        margin-top: .25rem;
+        border: 1px solid var(--border-primary);
+        gap: .5rem;
+        border-radius: .5rem;
+        padding: .75rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        transition: color .2s ease-in, border .2s ease-in;
+        &:has(input:hover) {
+          border: 1px solid var(--border-secondary);
+          & input::placeholder{
+            color: var(--content-secondary)
+          }
+        }
+        &:has(input:focus, input:active) {
+          border: 1px solid var(--border-brand);
+          & input::placeholder{
+            color: var(--content-primary)
+          }
+        }
+        & input{
+          width: 100%;
+          margin-left: 2rem;
+          position: absolute;
+          background-color: transparent;
+          color: var(--content-primary);
+          &::placeholder{
+            color: var(--content-secondary)
+          }
+        }
+      }
+      & .textarea-custom{
+        margin-top: .25rem;
+        border: 1px solid var(--border-primary);
+        gap: .5rem;
+        border-radius: .5rem;
+        padding: .75rem;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        position: relative;
+        height: 10rem;
+        transition: color .2s ease-in, border .2s ease-in;
+        &:has(textarea:hover) {
+          border: 1px solid var(--border-secondary);
+          & textarea::placeholder{
+            color: var(--content-secondary)
+          }
+        }
+        &:has(textarea:focus, textarea:active){
+          border: 1px solid var(--border-brand);
+          & textarea::placeholder{
+            color: var(--content-primary)
+          }
+        }
+        & textarea{
+          width: 96%;
+          height: 8.2rem;
+          position: absolute;
+          background-color: transparent;
+          color: var(--content-primary);
+          &::placeholder{
+            color: var(--content-secondary);
+          }
+        }
+
+      }
+      & .date-custom{
+        margin-top: .25rem;
+        border: 1px solid var(--border-primary);
+        gap: .5rem;
+        border-radius: .5rem;
+        padding: .75rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        transition: color .2s ease-in, border .2s ease-in;
+        &:has(input:hover) {
+          border: 1px solid var(--border-secondary);
+          & input{
+            color: var(--content-secondary)
+          }
+        }
+        &:has(input:focus, input:active) {
+          border: 1px solid var(--border-brand);
+          & input{
+            color: var(--content-primary)
+          }
+        }
+        & input{
+          width: 100%;
+          margin-left: 2rem;
+          position: absolute;
+          background-color: transparent;
+          color: var(--content-primary);
+          font-size: var(--fs-base);
+          color: var(--content-secondary);
+          &::-webkit-calendar-picker-indicator{
+            opacity: 0;
+            z-index: 6;
+            position: absolute;
+            right: 2rem;
+            width: 15%;
+            height: 100%;
+            cursor: pointer;
+          }
+        }
+        & .dropdown-icon{
+          position: absolute;
+          right: 0.5rem;
+        }
+      }
+      & .hour-custom{
+        margin-top: .25rem;
+        border: 1px solid var(--border-primary);
+        gap: .5rem;
+        border-radius: .5rem;
+        padding: .75rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        transition: color .2s ease-in, border .2s ease-in;
+        &:has(input:hover) {
+          border: 1px solid var(--border-secondary);
+          & input{
+            color: var(--content-secondary)
+          }
+        }
+        &:has(input:focus, input:active) {
+          border: 1px solid var(--border-brand);
+          & input{
+            color: var(--content-primary)
+          }
+        }
+        & input{
+          width: 100%;
+          margin-left: 2rem;
+          position: absolute;
+          background-color: transparent;
+          color: var(--content-primary);
+          font-size: var(--fs-base);
+          color: var(--content-secondary);
+          &::-webkit-calendar-picker-indicator{
+            opacity: 0;
+            z-index: 6;
+            position: absolute;
+            right: 2rem;
+            width: 15%;
+            height: 100%;
+            cursor: pointer;
+          }
+        }
+        & .dropdown-icon{
+          position: absolute;
+          right: 0.5rem;
+        }
+      }
+
+
+    }
+    & footer{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+
+    }
+    & .button-wrapper{
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      margin-top: .75rem;
+      & button{
+        background-color: var(--content-brand);
+        color: #050505;
+        text-transform: uppercase;
+        gap: .5rem;
+        font-family: var(--ff-inter);
+        font-weight: var(--fw-bold);
+        padding-block: .75rem;
+        padding-inline: 1.5rem;
+        border-radius: .5rem;
+        transition: background .3s ease-in-out ;
+        &:hover{
+          background-color: #BDB4FA;
+        }
+      }
+    }
+
+  }
+}
+
+@media (width <= 70em){
+  .schedule-form{
+    --max-width: 375px;
+    width: calc(100% - .25rem * 2);
+    & form{
+      & footer{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  }
+}

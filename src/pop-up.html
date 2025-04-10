@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Pet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <div class="pop-up">
+    <section class="schedule-form">
+      <h2>Agende um atendimento</h2>
+      <p>Preencha os dados do cliente para realizar o agendamento:</p>
+      <form>
+          <div class="input-wrapper">
+            <label for="client-name">
+              Nome do tutor
+            </label>
+            <div class="input-custom">
+              <img src="./assets/icon/user.svg" alt="User icon.">
+              <input type="text" id="client-name" placeholder="Helena Souza">    
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="animal-name">
+              Nome do pet
+            </label>
+            <div class="input-custom">
+              <img src="./assets/icon/paw.svg" alt="Paw icon.">
+              <input type="text" id="animal-name" placeholder="Cheddar">    
+            </div>
+          </div>         
+          <div class="input-wrapper">
+            <label for="phone-number">
+              Telefone
+            </label>
+            <div class="input-custom">
+              <img src="./assets/icon/phone.svg" alt="Phone icon.">
+              <input type="text" id="phone-number" placeholder="(00) 0 0000-0000">    
+            </div>
+          </div>            
+          <div class="textarea-wrapper">
+            <label for="service-description">
+              Descrição do serviço
+            </label>
+            <div class="textarea-custom">
+              <textarea name="service-description" id="service-description" placeholder="Banho e tosa"></textarea>
+            </div>
+          </div>
+          <footer>
+            <div class="date-wrapper">
+              <label for="date">
+                Data
+              </label>
+              <div class="date-custom">
+                <img src="./assets/icon/calendar.svg" alt="Calendar Icon" class="calendar-icon">
+                <input type="date" id="date">
+                <img src="./assets/icon/dropdown.svg" alt="Dropdown Icon" class="dropdown-icon">
+              </div>
+            </div>
+  
+            <div class="hour-wrapper">
+              <label for="hour">
+                Hora
+              </label>
+              <div class="hour-custom">
+                <img src="./assets/icon/clock.svg" alt="Clock Icon" class="clock-icon">
+                <input type="time" id="hour">
+                <img src="./assets/icon/dropdown.svg" alt="Dropdown Icon" class="dropdown-icon">
+              </div>
+            </div>
+          </footer> 
+          <div class="button-wrapper">
+            <button type="submit">
+              Agendar
+            </button>
+          </div>
+      </form>
+    </section>
+  </div>
+  <section id="agenda" class="container">
+    <header class="agenda-header">
+      <div class="agenda-info">
+        <h1>Sua agenda</h1>
+        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </div>
+      <div class="agenda-day-filter">
+        <div class="custom-date-input">
+          <img src="./assets/icon/calendar.svg" alt="Calendar Icon" class="calendar-icon">
+          <input type="date" id="real-date-input">
+          <img src="./assets/icon/dropdown.svg" alt="Dropdown Icon" class="dropdown-icon" id="trigger-calendar">
+        </div>
+      </div>
+    </header>
+    <div class="agenda-list">
+      <section class="list-section morning">
+        <header class="list-header">
+          <img src="./assets/icon/morning.svg" alt="Blue sun icon.">
+          <h2>Manhã</h2>
+          <span>09h-12h</span>
+        </header>
+        <ul role="list">
+          <li class="client">
+            <span class="hour">09:00</span>
+            <span class="animal-name">Thor</span>
+            <span class="client-name">Fernanda Costa</span>
+            <span class="service-description">Vacinação</span>
+            <button type="reset">
+              Remover agendamento
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="list-section afternoon">
+        <header class="list-header">
+          <img src="./assets/icon/afternoon.svg" alt="Orange cloud icon.">
+          <h2>Tarde</h2>
+          <span>13h-18h</span>
+        </header>
+        <ul role="list">
+          <li class="client">
+            <span class="hour">13:00</span>
+            <span class="animal-name">Mel</span>
+            <span class="client-name">João Souza</span>
+            <span class="service-description">Corte de Unhas</span>
+            <button type="reset">
+              Remover agendamento
+            </button>
+          </li>
+          <li class="client">
+            <span class="hour">14:00</span>
+            <span class="animal-name">Bella</span>
+            <span class="client-name">Pedro Martins</span>
+            <span class="service-description">Aplicação de Anti-Pulgas</span>
+            <button type="reset">
+              Remover agendamento
+            </button>
+          </li>
+          <li class="client">
+            <span class="hour">15:00</span>
+            <span class="animal-name">Simba</span>
+            <span class="client-name">Juliana Rocha</span>
+            <span class="service-description">Tosa Higiênica</span>
+            <button type="reset">
+              Remover agendamento
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="list-section night">
+        <header class="list-header">
+          <img src="./assets/icon/night.svg" alt="Yellow moon icon.">
+          <h2>Noite</h2>
+          <span>19h-21h</span>
+        </header>
+        <ul role="list">
+          <li class="client">
+            <span class="hour">20:00</span>
+            <span class="animal-name">Max</span>
+            <span class="client-name">Camila Santos</span>
+            <span class="service-description">Limpeza de Dentes</span>
+            <button type="reset">
+              Remover agendamento
+            </button>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+</body>
+</html>

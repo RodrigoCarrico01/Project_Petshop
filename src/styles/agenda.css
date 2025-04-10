@@ -27,6 +27,72 @@
   }
 }
 
+#agenda .agenda-list{
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+   & .list-section{
+    background-color: var(--background-tertiary);
+    border-radius: .625rem;
+    & header{
+      display: flex;
+      gap: .75rem;
+      padding-block: .75rem;
+      padding-inline: 1.25rem;
+      & h2{
+        margin-right: auto;
+        font-size: var(--fs-base);
+        font-weight: var(--fw-bold);
+        color: var(--content-primary)
+      }
+      & span{
+        font-size: var(--fs-base);
+        font-weight: var(--fw-bold);
+        color: var(--content-secondary)
+      }
+    }
+    & ul{
+      gap: .125rem;
+      padding-block: 1.25rem;
+      padding-inline: 1.25rem;
+      display: flex;
+      flex-direction: column;
+
+      & li{
+        display: grid;
+        align-items: center;
+        justify-self: center;
+        gap: 1rem;
+        padding: 2rem;
+        grid-template-columns: auto 10% 20% 30% 30%;
+        & .hour{
+          color: var(--content-primary);
+        }
+        & .animal-name{
+          text-align: end;
+          color: var(--content-primary);
+          padding-right: 1rem;
+          border-right: 1px solid var(--border-primary);
+        }
+        & .client-name{
+          text-align: start;
+          color: var(--content-secondary);
+        }
+        & .service-description{
+          color: var(--content-secondary);
+        }
+        & button[type="reset"]{
+          color: var(--content-tertiary);
+          background-color: transparent;
+        }
+      }
+      & li:not(:last-child) {
+        border-bottom: 1px solid var(--border-primary);
+      }
+    }
+  }
+}
+
 @media (width <= 70em){
   #agenda.container{
     --max-width: 375px;
@@ -39,4 +105,42 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  #agenda .agenda-list{
+    & .list-section{
+      & ul{
+        & li{
+         display: grid;
+         grid-template-columns: repeat(4, auto);
+         grid-template-rows: repeat(3, 1fr);
+         grid-template-areas: 
+         "hour hour animal client"
+         "description description description description"
+         "button button button button";
+         & .hour{
+          grid-area: hour;
+          text-align: start;
+         }
+         & .animal-name{
+          grid-area: animal;
+          text-align: end;
+         }
+         & .client-name{
+          grid-area: client;
+          text-align: start;
+         }
+         & .service-description{
+          grid-area: description;
+          text-align: start;
+          align-self: flex-start;
+          padding-block: .5rem;
+         }
+         & button{
+          text-align: start;
+          grid-area: button;
+         }
+        }
+      }
+    }
+  }
+
 }

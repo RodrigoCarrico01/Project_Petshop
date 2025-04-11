@@ -1,4 +1,5 @@
 const form = document.querySelector('form')
+import {scheduleNew} from "../../services/schedule-new.js"
 
 //campos
 const clientNameInput = document.getElementById("client-name")
@@ -8,7 +9,7 @@ const serviceDescriptionTextarea = document.getElementById("service-description"
 const dateInput = document.getElementById("date")
 const hourInput = document.getElementById("hour")
 
-form.addEventListener("submit", (event)=>{
+form.addEventListener("submit", async (event)=>{
   event.preventDefault()
   try{
     //validar cliente
@@ -38,8 +39,19 @@ form.addEventListener("submit", (event)=>{
 
    const date = dateInput.value
    const hour = hourInput.value
+   const id = new Date().getTime()
+
    console.log(date, hour)
 
+   await scheduleNew({
+    id,
+    client,
+    animal,
+    phone, 
+    service,
+    date,
+    hour,
+  })
 
     clientNameInput.value = ""
     animalNameInput.value = ""

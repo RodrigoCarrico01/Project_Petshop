@@ -13,4 +13,5 @@ import "./styles/agenda.css"
 //JS
 import "./modules/load.js"
 import "./modules/form/load.js"
+import "./modules/form/fields.js"
 import "./modules/form/submit.js"

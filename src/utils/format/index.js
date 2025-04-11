@@ -1,0 +1,6 @@
+export * from "./phoneNumber.js"
+export * from "./clientName.js"
+export * from "./animalName.js"
+export * from "./serviceDescription.js"
+export * from "./date.js"
+export * from "./hour.js"

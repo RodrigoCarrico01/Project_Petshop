@@ -10,3 +10,7 @@ import "./styles/utility.css"
 import "./styles/form.css"
 import "./styles/agenda.css"
 
+//JS
+import "./modules/load.js"
+import "./modules/form/load.js"
+import "./modules/form/submit.js"

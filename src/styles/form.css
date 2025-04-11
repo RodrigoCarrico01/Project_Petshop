@@ -1,7 +1,7 @@
 .schedule-form{
   --max-width: 85em;
   max-width: var(--max-width);
-  width: calc(100% - 28rem * 2);
+  width: calc(100% - 30rem * 2);
   margin-inline: auto;
 
   background-color: #23242C;

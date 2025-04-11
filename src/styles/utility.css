@@ -93,7 +93,7 @@
   }
 }
 
-@media (width <= 70em){
+@media (width <= 80em){
   #redirect-form{
     position: sticky;
     top: 50%;

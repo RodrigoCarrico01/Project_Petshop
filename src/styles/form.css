@@ -28,7 +28,6 @@
       line-height: auto;
       gap: .25rem;
       margin-block: 1rem;
-
       & label{
         font-weight: var(--fw-bold);
       }
@@ -228,7 +227,7 @@
   }
 }
 
-@media (width <= 70em){
+@media (width <= 80em){
   .schedule-form{
     --max-width: 375px;
     width: calc(100% - .25rem * 2);

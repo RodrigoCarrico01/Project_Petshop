@@ -110,7 +110,7 @@
   }
 }
 
-@media (width <= 70em){
+@media (width <= 80em){
   #agenda.container{
     --max-width: 375px;
     width: calc(100% - 0rem * 2);

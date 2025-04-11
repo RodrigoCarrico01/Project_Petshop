@@ -31,8 +31,14 @@ export function schedulesShow({dailySchedules}){
     hour.textContent = schedule.hour
     animalName.textContent = schedule.animal
     clientName.textContent = schedule.client
-    serviceDescription.textContent = schedule.service
     removeBtn.textContent = "Remover agendamento"
+
+    let serviceText = schedule.service
+    if (serviceText.length > 40) {
+      serviceText = serviceText.slice(0, 25) + "..."
+      serviceDescription.title = schedule.service
+    }
+    serviceDescription.textContent = serviceText
 
     item.append(hour, animalName, clientName, serviceDescription, removeBtn)
 

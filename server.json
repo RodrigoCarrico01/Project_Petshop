@@ -8,6 +8,15 @@
       "service": "Tirar o pelo",
       "date": "2025-04-11",
       "hour": "13:00"
+    },
+    {
+      "id": 1744374942708,
+      "client": "Rui",
+      "animal": "Jonas",
+      "phone": "24154125421",
+      "service": "Limpar o pelo",
+      "date": "2025-04-11",
+      "hour": "16:00"
     }
   ]
 }

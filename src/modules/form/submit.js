@@ -1,5 +1,6 @@
 const form = document.querySelector('form')
 import {scheduleNew} from "../../services/schedule-new.js"
+import { isScheduleTaken } from "../../services/check-schedule-date.js"
 
 //campos
 const clientNameInput = document.getElementById("client-name")
@@ -41,7 +42,10 @@ form.addEventListener("submit", async (event)=>{
    const hour = hourInput.value
    const id = new Date().getTime()
 
-   console.log(date, hour)
+   const isTaken = await isScheduleTaken(date, hour)
+   if (isTaken) {
+     return alert("Já existe um agendamento para essa data e hora.")
+   }
 
    await scheduleNew({
     id,

@@ -1,4 +1,4 @@
-import { formatPhoneNumber, formatAnimalName, formatClientName, formatServiceDescription, formatTodayDate, formatTodayHour } from "../../utils/format"
+import { formatPhoneNumber, formatAnimalName, formatClientName, formatServiceDescription, formatTodayDate, formatOnlyFullHours } from "../../utils/format"
 
 const clientNameInput = document.getElementById("client-name")
 const animalNameInput = document.getElementById("animal-name")
@@ -6,8 +6,6 @@ const phoneNumberInput = document.getElementById("phone-number")
 const serviceDescriptionTextarea = document.getElementById("service-description")
 const dateInput = document.getElementById("date")
 const hourInput = document.getElementById("hour")
-
-console.log(clientNameInput, animalNameInput)
 
 
 clientNameInput.addEventListener("input", () => {
@@ -28,4 +26,11 @@ serviceDescriptionTextarea.addEventListener("input", () => {
 
 dateInput.value = formatTodayDate()
 dateInput.min = formatTodayDate()
-hourInput.value = formatTodayHour()
+
+hourInput.value = formatOnlyFullHours()
+hourInput.min = "09:00"
+hourInput.max = "21:00"
+
+hourInput.addEventListener("input", () => {
+  hourInput.value = formatOnlyFullHours(hourInput.value)
+})

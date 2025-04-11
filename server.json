@@ -17,6 +17,15 @@
       "service": "Limpar o pelo",
       "date": "2025-04-11",
       "hour": "16:00"
+    },
+    {
+      "id": 1744379655913,
+      "client": "Heleza Souza",
+      "animal": "Cheddar",
+      "phone": "32141541241",
+      "service": "Lavagem",
+      "date": "2025-04-12",
+      "hour": "20:00"
     }
   ]
 }

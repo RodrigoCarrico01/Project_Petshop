@@ -1,6 +1,6 @@
 const form = document.querySelector('form')
 import {scheduleNew} from "../../services/schedule-new.js"
-import { isScheduleTaken } from "../../services/check-schedule-date.js"
+import { isScheduleTaken } from "../../services/check-schedule.js"
 
 //campos
 const clientNameInput = document.getElementById("client-name")

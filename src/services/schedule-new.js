@@ -7,7 +7,7 @@ export async function scheduleNew({id, client, animal, phone, service, date, hou
       headers:{
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({id, client, animal, phone, service, date, hour})
+      body: JSON.stringify({id: String(id), client, animal, phone, service, date, hour})
     })
 
     //Exibir uma mensagem de sucesso

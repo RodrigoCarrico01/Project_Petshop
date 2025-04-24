@@ -32,7 +32,7 @@ O Primeiro desafio da parte Javascript da trilha Full-Stack, promovido pela Rock
 
 ## Projeto
 
-- [EM BREVE!](...)
+- [PROJETO](https://project-petshop.vercel.app/)
 
 
 ## Layout
